@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@/api": ["api"],
+      "@/api/*": ["api/*"],
+      "@/config": ["config"],
+      "@/config/*": ["config/*"],
+      "@/controllers": ["controllers"],
+      "@/controllers/*": ["controllers/*"],
+      "@/middleware": ["middleware"],
+      "@/middleware/*": ["middleware/*"],
+      "@/models": ["models"],
+      "@/models/*": ["models/*"],
+      "@/routes": ["routes"],
+      "@/routes/*": ["routes/*"],
+      "@/schemas": ["schemas"],
+      "@/schemas/*": ["schemas/*"],
+      "@/services": ["services"],
+      "@/services/*": ["services/*"],
+      "@/utils": ["utils"],
+      "@/utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+}
