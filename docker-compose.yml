@@ -3,7 +3,7 @@ version: "3.8"
 services:
   postgres:
     image: postgres:17.2-alpine
-    container_name: node-app-postgres
+    container_name: jules-notes-be-postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-app}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-app}

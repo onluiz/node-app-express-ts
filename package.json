@@ -1,7 +1,7 @@
 {
-  "name": "node-app-express",
+  "name": "jules-notes-be",
   "version": "1.0.0",
-  "description": "A Node.js Express API built with TypeScript",
+  "description": "Backend API for Jules Notes project",
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",

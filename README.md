@@ -1,11 +1,14 @@
-# Node Express API
+# Jules Notes API
 
-A Node.js Express API built with TypeScript, following best practices and modern patterns.
+Backend API for the Jules Notes project.
+
+This is the backend API for [jules-notes-fe](https://github.com/onluiz/jules-notes-fe), built with Node.js, Express, and TypeScript.
 
 ## Features
 
 - TypeScript with strict mode
 - Express.js server
+- Drizzle ORM with PostgreSQL
 - Zod schema validation
 - MVC architecture
 - Unit tests with Vitest
@@ -13,17 +16,17 @@ A Node.js Express API built with TypeScript, following best practices and modern
 
 ## Live Demo
 
-https://node-app-express.vercel.app
+https://jules-notes-be.vercel.app
 
 ## Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /users | List all users |
-| GET | /users/:id | Get user by ID |
-| POST | /users | Create user |
-| PUT | /users/:id | Update user |
-| DELETE | /users/:id | Delete user |
+| Method | Endpoint   | Description    |
+| ------ | ---------- | -------------- |
+| GET    | /users     | List all users |
+| GET    | /users/:id | Get user by ID |
+| POST   | /users     | Create user    |
+| PUT    | /users/:id | Update user    |
+| DELETE | /users/:id | Delete user    |
 
 Query parameters for `/users`: `username`, `email`
 
@@ -55,17 +58,17 @@ pnpm start
 
 ## Commands
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server |
-| `pnpm build` | Compile TypeScript |
-| `pnpm start` | Run compiled code |
-| `pnpm test` | Run tests (watch mode) |
-| `pnpm test:run` | Run tests once |
-| `pnpm lint` | Run ESLint |
-| `pnpm lint:fix` | Fix linting issues |
-| `pnpm format` | Format code |
-| `pnpm typecheck` | Type check |
+| Command          | Description              |
+| ---------------- | ------------------------ |
+| `pnpm dev`       | Start development server |
+| `pnpm build`     | Compile TypeScript       |
+| `pnpm start`     | Run compiled code        |
+| `pnpm test`      | Run tests (watch mode)   |
+| `pnpm test:run`  | Run tests once           |
+| `pnpm lint`      | Run ESLint               |
+| `pnpm lint:fix`  | Fix linting issues       |
+| `pnpm format`    | Format code              |
+| `pnpm typecheck` | Type check               |
 
 ## Project Structure
 
