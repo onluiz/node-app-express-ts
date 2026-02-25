@@ -32,9 +32,9 @@ pnpm test -- --testNamePattern="name"  # Run specific test by name
 
 ### Linting & Formatting
 ```bash
-pnpm lint         # Run ESLint
+pnpm lint         # Run Biome lint
 pnpm lint:fix     # Fix linting issues
-pnpm format       # Format code with Prettier
+pnpm format       # Format code with Biome
 ```
 
 ### Type Checking
@@ -132,13 +132,17 @@ src/
 │   └── user.api.ts   # API calls for user resource
 ├── config/           # Configuration files
 ├── controllers/      # Route handlers
+│   ├── index.ts      # Barrel export
+│   └── user-controller.ts
 ├── middleware/       # Express middleware
 ├── models/           # TypeScript interfaces/types
 │   ├── index.ts      # Barrel export
-│   ├── user.ts      # User interface
+│   ├── user.ts       # User interface
 │   ├── address.ts    # Address interface
 │   └── api-response.ts
 ├── routes/           # Route definitions
+│   ├── index.ts      # Barrel export
+│   └── user-routes.ts
 ├── schemas/          # Zod validation schemas
 │   ├── index.ts      # Barrel export
 │   ├── user.schema.ts
@@ -146,7 +150,12 @@ src/
 │   ├── user-query.schema.ts
 │   └── user-body.schema.ts
 ├── services/         # Business logic
+│   ├── index.ts      # Barrel export
+│   └── user-service.ts
 ├── utils/            # Utility functions
+│   ├── index.ts      # Barrel export
+│   ├── async-handler.ts
+│   └── app-error.ts
 └── index.ts          # Entry point
 ```
 
@@ -168,6 +177,19 @@ export * from './user-body.schema';
 
 // src/api/index.ts
 export * from './user.api';
+
+// src/controllers/index.ts
+export * from './user-controller';
+
+// src/routes/index.ts
+export * from './user-routes';
+
+// src/utils/index.ts
+export * from './async-handler';
+export * from './app-error';
+
+// src/services/index.ts
+export * from './user-service';
 ```
 
 ### Schema Validation (Zod)
