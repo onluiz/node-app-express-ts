@@ -1,6 +1,6 @@
-import express, { type Application, type Request, type Response, type NextFunction } from 'express';
-import { ZodError } from 'zod';
 import dotenv from 'dotenv';
+import express, { type Application, type NextFunction, type Request, type Response } from 'express';
+import { ZodError } from 'zod';
 import userRouter from './routes/user-routes';
 
 dotenv.config();
